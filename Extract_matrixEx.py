@@ -1,5 +1,29 @@
-#' This script is used to extract the gene matrix based on the single cell barcode list
-#'
+#'This script is used to extract the gene matrix based on the single cell barcode list
+#'The barcode list and the gene matrix is required,
+#Barcode list: 
+#  "AAACCCAAGAAGGTAG"
+#  "AAACCCAAGACCTCCG"
+#  "AAACCCACAACTTGGT"
+#  "AAACCCAGTTATCTTC"
+#  "AAACGAACACACTTAG"
+#  "AAACGAAGTAGGCTGA"
+#  "AAACGCTTCACGATAC"
+#  "AAAGGATAGACCTTTG"
+#  "AAAGGATAGTCTAGAA"
+#   Gene matrix data
+#  "AAACCCAAGAAGGTAG" "AAACCCAAGACCTCCG" "AAACCCACAACTTGGT" "AACCCAGTTATCTTC"
+#  "RP11-34P13.7" 1 0 0 0
+#  "FO538757.2" 2 0 0 0
+#  "AP006222.2" 0 0 0 0
+#  "RP4-669L17.10" 0 0 0 1
+#  "RP5-857K21.4" 0 0 1 1
+#  "RP11-206L10.9" 5 0 1 1
+#  "RP11-54O7.16" 0 0 0 0
+#  "RP11-54O7.3" 0 0 0 0
+#  "SAMD11" 0 0 0 0
+#  "NOC2L" 2 0 0 0
+#  "KLHL17" 0 0 0 0
+
 
 import os
 import re

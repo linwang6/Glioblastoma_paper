@@ -33,7 +33,7 @@ import sys
 feature=open(sys.argv[1],'r')#Single cell barcode list
 TrEx1=open(sys.argv[2],'r')#scRNA-Seq matrix
 TrEx2=open(sys.argv[2],'r')#scRNA-Seq matrix
-predD=open(sys.argv[3],'w')#ouput of matrix data
+subEx=open(sys.argv[3],'w')#ouput of matrix data
 
 
 mkl=[]
@@ -71,7 +71,7 @@ for line in TrEx2:
         for id in range(0,int(len(lineE))):
             if lineE[id] in mkls.keys():
                 cellID=cellID+lineE[id]+'       '
-        print >>predD,cellID
+        print >>subEx,cellID
         cellID
 
     if '"' not in lineE[1]:
@@ -80,12 +80,12 @@ for line in TrEx2:
             #print value,len(lineE)
             exp=exp+lineE[int(value)]+' '
         
-        print >>predD,lineE[0]+'        '+exp
+        print >>subEx,lineE[0]+'        '+exp
         exp=''
         
 
 feature.close()
 TrEx1.close()
 TrEx2.close()
-predD.close()
+subEx.close()
 

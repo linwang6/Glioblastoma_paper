@@ -1,7 +1,9 @@
 #We use seurat 3.0 package to perform dimensional reduction
 #Please check the seurat here https://satijalab.org/seurat/v3.0/pbmc3k_tutorial.html
 #Created date, 08/06/2019
-#Firstly, we identify the top HVGs each case,
+#
+#
+# Firstly, we identify the top HVGs each case,
 #
 #
 gliomaPatient<-read.table('patient_gene_matrix',row.names=1,head=TRUE)
@@ -14,7 +16,8 @@ gliomaPatient <- NormalizeData(gliomaPatient, normalization.method = "LogNormali
 gliomaPatient <- FindVariableFeatures(gliomaPatient, selection.method = "vst", nfeatures = 1000)
 #
 #
-#Then the PCA was done using those genes that were among the 1000 most variable genes for at least three patients
+# Then the PCA was done using those genes that were among the 1000 most variable genes for at least three patients
+#
 #
 gliomaMergedP<-read.table('patients_gene_matrix',row.names=1,head=TRUE)
 gliomaMergedP<-CreateSeuratObject(counts = gliomaMergedP)

@@ -30,6 +30,8 @@ gliomaMP <- RunPCA(gliomaMP, features = HVGs.genes)
 DimPlot(gliomaMP, reduction = "pca",dims = c(1, 2), label = T)
 gliomaMP <- RunUMAP(gliomaMP, dims = 1:10, label = T)
 gliomaMP <- RunTSNE(gliomaMP, dims = 1:10, label = T)
+DimPlot(gliomaMP, reduction = "umap", label = T)
+DimPlot(gliomaMP, reduction = "tsne", label = T)
 
 
 #

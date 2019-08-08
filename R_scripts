@@ -26,7 +26,7 @@ VlnPlot(gliomaMP, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol
 gliomaMP <- subset(gliomaMP, subset = percent.mt < 5)
 gliomaMP <- NormalizeData(gliomaMP, normalization.method = "LogNormalize", scale.factor = 10000)
 gliomaMP <- ScaleData(object = gliomaMP,vars.to.regress = c("percent.mt"))
-gliomaMP <- RunPCA(gliomaMP, features = HVGs_selected.genes)
+gliomaMP <- RunPCA(gliomaMP, features = HVGs.genes)
 DimPlot(gliomaMP, reduction = "pca",dims = c(1, 2), label = T)
 gliomaMP <- RunUMAP(gliomaMP, dims = 1:10, label = T)
 gliomaMP <- RunTSNE(gliomaMP, dims = 1:10, label = T)

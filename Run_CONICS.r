@@ -32,5 +32,5 @@ plot.new()
 png("glioma_CNVs_plotChromosomeHeatmap.png",width = 1000,height = 600)
 plotChromosomeHeatmap(glioma_CNV,normal = normal, plotcells = 1:(length(normal)+length(tumor)), gene_pos = gene_pos, windowsize = 121,thresh = 0.4,expThresh = 0.1,chr=T)##colo=c(rep("blue",length(normal)),rep("red",length(tumor))
 dev.off()
-
+  
 
